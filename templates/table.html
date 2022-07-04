@@ -1,0 +1,31 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+    </head>
+    <body>
+        <table action="/table" border="1">
+            <thead>
+                <tr>
+                   
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Rating</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+
+                </tr>
+                <tbody>
+                    {% for row in Data %}
+                    <tr>
+                       {% for cell in row%}
+                   <td> {{cell}}</td>
+                   {% endfor %}
+                    </tr>
+                   {% endfor %}
+
+                </tbody>
+            </thead>
+        </table>
+    </body>
